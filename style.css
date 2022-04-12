@@ -315,6 +315,7 @@ section #features{
 }
  .feature-container{
  /* display: flex; */
+ margin: 3rem 0 1rem 0;
  align-items: center;
   border: 0.006rem solid var(--black-color);
   border-radius: 0.5rem;
@@ -370,8 +371,11 @@ section #features{
 
 }
 
-.feature-container img:hover{
+ .feature-container:hover{
     transform: scale(1.1);
+} 
+.feature-container :hover .icons a{
+    left: 1rem;
 }
 
   @media (max-width: 991px) {
