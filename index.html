@@ -34,9 +34,9 @@
 
             <div class="swiper-container home-slider">
 
-                <div class="swiper-wrapper wrapper">
+                <div class="swiper-wrapper wrapper" id="first">
 
-                      <div class="swiper-slide slide">
+                      <div class="swiper-slide slide" >
                           <div class="content">
                               <span>Our special products</span>
                               <h3>Fashion clothing</h3>
@@ -74,7 +74,19 @@
                         </div>
                       </div>
 
+                      
+        <a class="slider-btn left" onclick="setslides(-1,'first','firstSliderIndex')">&#10094; </a>
+        <a class="slider-btn right"  onclick="setslides(+1,'first','firstSliderIndex')"> &#10095; </a>
 
+                     
+                        
+                      </div>
+
+                      <div style="text-align:center">
+                        <span class="dot"  onclick="currentSlide(1,'first','firstSliderIndex')"></span>
+                        <span class="dot"  onclick="currentSlide(2,'first','firstSliderIndex')"></span>
+                        <span class="dot"  onclick="currentSlide(3,'first','firstSliderIndex')"></span>
+                      
                 </div>
 
             </div>
@@ -132,7 +144,7 @@
         <div class="range-images">
 
             <div class="image-wrapper">
-                <div class="ri img1">
+                <div class="ri img1" >
                    <img src="images/bags.jpg" alt="">
                    <div class="img-des">Bags</div>
                 </div>
@@ -167,114 +179,208 @@
         <section id="speciality">
             <div class="specials">
             <div class="special-wrapper">
-          <div class="r r1">Featured</div>
-          <DIV class="r r2">latest</DIV>
-          <div class="r r3">bestSellers</div>
-          <div class="r r4">specials</div>
+          <div class="r specials r1">Featured</div>
+          <DIV class="r specials r2">latest</DIV>
+          <div class="r specials r3">bestSellers</div>
+          <div class="r specials r4">specials</div>
         </div>
     </div>
 
     <div class="swiper features-swiperslider">
-         <div class="features-swiper-wrapper" >
+         <div class="features-swiper-wrapper" id="second" >
+            <div class="slide">
 
-         <div class="feature-container slide">
-             <div class="icons">
-                 <a href="#" class="fas fa-heart"></a>
-                 <a href="#" class="fas fa-share"></a>
-                 <a href="#" class="fas fa-eye"></a>
-             </div>
-             <div class="discount">50% off</div>
-             <img src="images/kurti.jpg" alt="">
-             <div class="content">
-             <h3>Kurti</h3>
-             <div class="price">Rs 300</div>
-             <div class="stars">
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-             </div>
-             <a href="#" class="btn">add to cart</a>
-            </div>
-         </div>
-
-         <div class="feature-container slide">
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="discount">50% off</div>
-            <img src="images/speakers.jpg" alt="">
-            <div class="content">
-                <h3>Speakers</h3>
-                <div class="price">Rs 300</div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="feature-container ">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="discount">50% off</div>
+                    <img src="images/kurti.jpg" alt="">
+                    <div class="content">
+                    <h3>Kurti</h3>
+                    <div class="price">Rs 300</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                   </div>
                 </div>
-                <a href="#" class="btn">add to cart</a>
-               </div>
+       
+                <div class="feature-container ">
+                   <div class="icons">
+                       <a href="#" class="fas fa-heart"></a>
+                       <a href="#" class="fas fa-share"></a>
+                       <a href="#" class="fas fa-eye"></a>
+                   </div>
+                   <div class="discount">50% off</div>
+                   <img src="images/speakers.jpg" alt="">
+                   <div class="content">
+                       <h3>Speakers</h3>
+                       <div class="price">Rs 300</div>
+                       <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                       </div>
+                       <a href="#" class="btn">add to cart</a>
+                      </div>
+                   </div>
+       
+       
+               <div class="feature-container">
+                   <div class="icons">
+                       <a href="#" class="fas fa-heart"></a>
+                       <a href="#" class="fas fa-share"></a>
+                       <a href="#" class="fas fa-eye"></a>
+                   </div>
+                   <div class="discount">50% off</div>
+                   <img src="images/watches.gif" alt="">
+                   <div class="content">
+                       <h3>Watches</h3>
+                       <div class="price">Rs 300</div>
+                       <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                       </div>
+                       <a href="#" class="btn">add to cart</a>
+                      </div>
+                   </div>
+
             </div>
 
-
-        <div class="feature-container slide">
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="discount">50% off</div>
-            <img src="images/watches.gif" alt="">
-            <div class="content">
-                <h3>Watches</h3>
-                <div class="price">Rs 300</div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="#" class="btn">add to cart</a>
-               </div>
-            </div>
-
-        <div class="feature-container slide">
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="discount">50% off</div>
-            <img src="images/newHeadphones.png" alt="">
-            <div class="content">
-                <h3>Headphones</h3>
-                <div class="price">Rs 300</div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="#" class="btn">add to cart</a>
-               </div>
-            </div>
-            <div class="feature-container slide">
+        <div class="slide">
+            <div class="feature-container">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="fas fa-share"></a>
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="discount">50% off</div>
-                <img src="images/lipsticks.jpg" alt="">
+                <img src="images/newHeadphones.png" alt="">
                 <div class="content">
-                    <h3>lipsticks</h3>
+                    <h3>Headphones</h3>
+                    <div class="price">Rs 300</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                   </div>
+                </div>
+                <div class="feature-container ">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="discount">50% off</div>
+                    <img src="images/lipsticks.jpg" alt="">
+                    <div class="content">
+                        <h3>lipsticks</h3>
+                        <div class="price">Rs 300</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                       </div>
+                    </div>
+    
+                    <div class="feature-container">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="discount">50% off</div>
+                        <img src="images/kurta.jpg" alt="">
+                        <div class="content">
+                            <h3>Kurta</h3>
+                            <div class="price">Rs 300</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="#" class="btn">add to cart</a>
+                           </div>
+                        </div>
+
+        </div>
+
+      <div class="slide">
+        <div class="feature-container ">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="discount">50% off</div>
+            <img src="images/refri.jpg" alt="">
+            <div class="content">
+                <h3>Refrigirator</h3>
+                <div class="price">Rs 300</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">add to cart</a>
+               </div>
+            </div>
+        <div class="feature-container">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="discount">50% off</div>
+            <img src="images/jwellery.jpg" alt="">
+            <div class="content">
+                <h3>jwellery</h3>
+                <div class="price">Rs 300</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">add to cart</a>
+               </div>
+            </div>
+
+            <div class="feature-container">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="discount">50% off</div>
+                <img src="images/LAMP.jpg" alt="">
+                <div class="content">
+                    <h3>Lamp</h3>
                     <div class="price">Rs 300</div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -287,16 +393,43 @@
                    </div>
                 </div>
 
-                <div class="feature-container slide">
+      </div>
+
+
+                    
+         <div class="slide">
+            <div class="feature-container">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="discount">50% off</div>
+                <img src="images/shoes.jpg" alt="">
+                <div class="content">
+                    <h3>Shoes</h3>
+                    <div class="price">Rs 300</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                   </div>
+                </div>
+
+                <div class="feature-container">
                     <div class="icons">
                         <a href="#" class="fas fa-heart"></a>
                         <a href="#" class="fas fa-share"></a>
                         <a href="#" class="fas fa-eye"></a>
                     </div>
                     <div class="discount">50% off</div>
-                    <img src="images/kurta.jpg" alt="">
+                    <img src="images/bags.jpg" alt="">
                     <div class="content">
-                        <h3>Kurta</h3>
+                        <h3>Bags</h3>
                         <div class="price">Rs 300</div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -309,17 +442,16 @@
                        </div>
                     </div>
 
-
-                    <div class="feature-container slide">
+                    <div class="feature-container ">
                         <div class="icons">
                             <a href="#" class="fas fa-heart"></a>
                             <a href="#" class="fas fa-share"></a>
                             <a href="#" class="fas fa-eye"></a>
                         </div>
                         <div class="discount">50% off</div>
-                        <img src="images/refri.jpg" alt="">
+                        <img src="images/camera.jpg" alt="">
                         <div class="content">
-                            <h3>Refrigirator</h3>
+                            <h3>Camera</h3>
                             <div class="price">Rs 300</div>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -331,123 +463,21 @@
                             <a href="#" class="btn">add to cart</a>
                            </div>
                         </div>
-                    <div class="feature-container slide">
-                        <div class="icons">
-                            <a href="#" class="fas fa-heart"></a>
-                            <a href="#" class="fas fa-share"></a>
-                            <a href="#" class="fas fa-eye"></a>
-                        </div>
-                        <div class="discount">50% off</div>
-                        <img src="images/jwellery.jpg" alt="">
-                        <div class="content">
-                            <h3>jwellery</h3>
-                            <div class="price">Rs 300</div>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <a href="#" class="btn">add to cart</a>
-                           </div>
-                        </div>
+                    </div>
+                         
+        </div>
+                            
 
-                        <div class="feature-container slide">
-                            <div class="icons">
-                                <a href="#" class="fas fa-heart"></a>
-                                <a href="#" class="fas fa-share"></a>
-                                <a href="#" class="fas fa-eye"></a>
-                            </div>
-                            <div class="discount">50% off</div>
-                            <img src="images/LAMP.jpg" alt="">
-                            <div class="content">
-                                <h3>Lamp</h3>
-                                <div class="price">Rs 300</div>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <a href="#" class="btn">add to cart</a>
-                               </div>
-                            </div>
+        <div class="swiper-pagination"></div>
 
-                            <div class="feature-container slide">
-                                <div class="icons">
-                                    <a href="#" class="fas fa-heart"></a>
-                                    <a href="#" class="fas fa-share"></a>
-                                    <a href="#" class="fas fa-eye"></a>
-                                </div>
-                                <div class="discount">50% off</div>
-                                <img src="images/shoes.jpg" alt="">
-                                <div class="content">
-                                    <h3>Shoes</h3>
-                                    <div class="price">Rs 300</div>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <a href="#" class="btn">add to cart</a>
-                                   </div>
-                                </div>
-
-                                <div class="feature-container slide">
-                                    <div class="icons">
-                                        <a href="#" class="fas fa-heart"></a>
-                                        <a href="#" class="fas fa-share"></a>
-                                        <a href="#" class="fas fa-eye"></a>
-                                    </div>
-                                    <div class="discount">50% off</div>
-                                    <img src="images/bags.jpg" alt="">
-                                    <div class="content">
-                                        <h3>Bags</h3>
-                                        <div class="price">Rs 300</div>
-                                        <div class="stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <a href="#" class="btn">add to cart</a>
-                                       </div>
-                                    </div>
-
-                                    <div class="feature-container slide">
-                                        <div class="icons">
-                                            <a href="#" class="fas fa-heart"></a>
-                                            <a href="#" class="fas fa-share"></a>
-                                            <a href="#" class="fas fa-eye"></a>
-                                        </div>
-                                        <div class="discount">50% off</div>
-                                        <img src="images/camera.jpg" alt="">
-                                        <div class="content">
-                                            <h3>Camera</h3>
-                                            <div class="price">Rs 300</div>
-                                            <div class="stars">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <a href="#" class="btn">add to cart</a>
-                                           </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-pagination"></div>
-
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
+            <a class="slider-btn left" onclick="setslides(-1,'second','SecondSliderIndex')">&#10094; </a>
+             <a class="slider-btn right"  onclick="setslides(1,'second','SecondSliderIndex')"> &#10095; </a>
     </div>
-
+    <div style="text-align:center">
+        <span class="dot"  onclick="currentSlide(1,'second','SecondSliderIndex')"></span>
+        <span class="dot"  onclick="currentSlide(2,'second','SecondSliderIndex')"></span>
+        <span class="dot"  onclick="currentSlide(3,'second','SecondSliderIndex')"></span>
+        <span class="dot"  onclick="currentSlide(4,'second','SecondSliderIndex')"></span>
 </section>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
