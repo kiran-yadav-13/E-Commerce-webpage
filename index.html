@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a051937107.js" crossorigin="anonymous"></script>
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-/>
+    <script src="https://kit.fontawesome.com/a051937107.js" crossorigin="anonymous"></script>
     <title>E-commerce website</title>
 </head>
 <body>
@@ -51,9 +48,10 @@
 
                           <div class="swiper-slide slide">
                           <div class="content">
+
                             <span>Our special products</span>
                             <h3>Headphones</h3>
-                            <p>qdebitis vitae at odio dolorum quia sapiente repellendus. Qui, doloribus?</p>
+                            <p>qdebitis vitae at odio dos. Qui, doloribus?</p>
                             <a href="#" class="btn">order now</a>
                         </div>
                      
@@ -74,22 +72,19 @@
                         </div>
                       </div>
 
-                      
-        <a class="slider-btn left" onclick="setslides(-1,'first','firstSliderIndex')">&#10094; </a>
-        <a class="slider-btn right"  onclick="setslides(+1,'first','firstSliderIndex')"> &#10095; </a>
+         <div class="pagination">
+            <a class="slider-btn left" onclick="setslides(-1,'first','firstSliderIndex')">&#10094; </a>
+            <a class="slider-btn right"  onclick="setslides(+1,'first','firstSliderIndex')"> &#10095; </a>
+         </div>       
+        </div>
 
-                     
-                        
-                      </div>
-
-                      <div style="text-align:center">
-                        <span class="dot"  onclick="currentSlide(1,'first','firstSliderIndex')"></span>
-                        <span class="dot"  onclick="currentSlide(2,'first','firstSliderIndex')"></span>
-                        <span class="dot"  onclick="currentSlide(3,'first','firstSliderIndex')"></span>
-                      
-                </div>
-
-            </div>
+    </div>
+    <div style="text-align:center" class="dot-wrapper">
+        <span class="dot dot1"  onclick="currentSlide(1,'first','firstSliderIndex')"></span>
+         <span class="dot dot1"  onclick="currentSlide(2,'first','firstSliderIndex')"></span>
+         <span class="dot dot1"  onclick="currentSlide(3,'first','firstSliderIndex')"></span>
+                   
+     </div>
         </section>
         <section id="features">
 
@@ -107,7 +102,7 @@
             <div class="fas fa-undo"></div>
            <div class="fcontent">
             <h3>Free Return</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+         <p>Lorem ipsum dolor sit amet.</p>
            </div>
         </div>
 
@@ -135,29 +130,29 @@
         <section id="range-availabe">
             <div class="range">
             <div class="range-wrapper">
-          <div class="r r1">TOP CATEGORIES</div>
-          <DIV class="r r2">ELECTRONICS</DIV>
-          <div class="r r3">Beauty</div>
-          <div class="r r4">fashion</div>
+          <div class="r ranges r1">TOP CATEGORIES</div>
+          <DIV class="r ranges r2">ELECTRONICS</DIV>
+          <div class="r ranges r3">Beauty</div>
+          <div class="r ranges r4">fashion</div>
         </div>
      </div>
         <div class="range-images">
 
             <div class="image-wrapper">
-                <div class="ri img1" >
+                <div class="ri img1" onmouseover="colorRange(0)">
                    <img src="images/bags.jpg" alt="">
                    <div class="img-des">Bags</div>
                 </div>
-                <div class="ri img1">
+                <div class="ri img1" onmouseover="colorRange(1)">
                     <img src="images/heels.jpg" alt="">
                     <div class="img-des">Heels</div>
                 </div>
-                <div class="ri img1">
+                <div class="ri img1" onmouseover="colorRange(2)">
                     <img src="images/homedecor.jpg" alt="">
                     <div class="img-des">Home-decor</div>
                 </div>
             
-            <div class="ri img1">
+            <div class="ri img1" onmouseover="colorRange(3)">
                 <img src="images/beautyproducts.jpg" alt="">
                 <div class="img-des">Beauty</div>
             </div>
@@ -186,11 +181,13 @@
         </div>
     </div>
 
-    <div class="swiper features-swiperslider">
-         <div class="features-swiper-wrapper" id="second" >
-            <div class="slide">
+    <div class="swiper-container features-swiperslider">
+         <div class="features-swiper-wrapper wrapper"  id="second" >
 
-                <div class="feature-container ">
+
+            <div class="slide feature-slide">
+
+                <div class="feature-container">
                     <div class="icons">
                         <a href="#" class="fas fa-heart"></a>
                         <a href="#" class="fas fa-share"></a>
@@ -259,7 +256,7 @@
 
             </div>
 
-        <div class="slide">
+        <div class="slide feature-slide">
             <div class="feature-container">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
@@ -327,7 +324,7 @@
 
         </div>
 
-      <div class="slide">
+      <div class="slide feature-slide">
         <div class="feature-container ">
             <div class="icons">
                 <a href="#" class="fas fa-heart"></a>
@@ -397,7 +394,7 @@
 
 
                     
-         <div class="slide">
+         <div class="slide feature-slide">
             <div class="feature-container">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
@@ -468,20 +465,65 @@
         </div>
                             
 
-        <div class="swiper-pagination"></div>
+        <div class="pagination">
 
             <a class="slider-btn left" onclick="setslides(-1,'second','SecondSliderIndex')">&#10094; </a>
              <a class="slider-btn right"  onclick="setslides(1,'second','SecondSliderIndex')"> &#10095; </a>
-    </div>
+         </div>
+    
+       
     <div style="text-align:center">
-        <span class="dot"  onclick="currentSlide(1,'second','SecondSliderIndex')"></span>
-        <span class="dot"  onclick="currentSlide(2,'second','SecondSliderIndex')"></span>
-        <span class="dot"  onclick="currentSlide(3,'second','SecondSliderIndex')"></span>
-        <span class="dot"  onclick="currentSlide(4,'second','SecondSliderIndex')"></span>
+        <span class="dot dot2"  onclick="currentSlide(1,'second','SecondSliderIndex')"></span>
+        <span class="dot dot2"  onclick="currentSlide(2,'second','SecondSliderIndex')"></span>
+        <span class="dot dot2"  onclick="currentSlide(3,'second','SecondSliderIndex')"></span>
+        <span class="dot dot2"  onclick="currentSlide(4,'second','SecondSliderIndex')"></span>
+    </div>
+ </div>
 </section>
+<footer>
+    <div class="columns">
+    <div class="col comp-desc">
+        <h1 class="logo">FASHION.</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae tempora, eum facere et voluptas velit inventore ipsam obcaecati optio!</P>
+    </div>
+    <div class="col office">
+        <h3>Office <div class="underline"> <span></span></div></h3>
+        <p>Meerut Road</p>
+        <p>Shaheed sthal, ghaziabad</p>
+        <p>Uttar Pradesh, PIN 201003, India</p>
+        <p class="email">fashion@gmail.com</p>
+        <h4>+91 56675893</h4>
+    </div>
+    <div class="col links">
+    <h3>LINKS <div class="underline"><span></span></div></h3>
+    <ul>
+        <li> <a href="#">HOME</a></li>
+        <li> <a href="#">SERVICES</a></li>
+        <li> <a href="#">CONTACT US</a></li>
+        <li> <a href="#">ABOUT US</a></li>
+    </ul>
+</div>
+<div class="col email ">
+    <h3>Register <div class="underline"> <span></span></div></h3>
+    <form >
+        <i class="far fa-envelope"></i>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+    </form>
+    <div class="social-media-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+</div>
+</div>
+<hr>
+<p class="copyright">FASHION. 2022 @ All Rights Reserved</p>
+</footer>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
         
-    </div>
+  
 </body>
 </html>
