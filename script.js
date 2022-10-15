@@ -3,8 +3,7 @@ var indexes={
    firstSliderIndex :1,
    SecondSliderIndex : 2,
 };
-// var index;
-// var id;
+
 
 window.onscroll =()=>{
     if(window.onscrollY){
@@ -18,115 +17,96 @@ window.onscroll =()=>{
 
 
  
-// var currentIndex=1;
-// displaySlides(currentIndex);
+var currentIndex={
+   firstIndex:1,
+   secondIndex:1
+};
 
-// function setslides(num){
-//     displaySlides(currentIndex+=num);
-// }
-
-// function currentSlide(n){
-//     displaySlides(currentIndex=n);
-// }
-
-// function displaySlides(num){
-
-//  var slides=document.getElementsByClassName("swiper-slide slide");
-//  var dots=document.getElementsByClassName("dot");
-//  console.log(dots)
-//  if(num<1){
-//     currentIndex=slides.length;
-//  }
-//  if(num>slides.length){
-//     currentIndex=1;
-//  }
-//  var x;
-//  for(x=0; x<slides.length; x++){
-//     slides[x].style.display="none";
-//  }
-//  for(x=0; x<dots.length; x++){
-//     dots[x].className=dots[x].className.replace(" active", "");
-//  }
-//  slides[currentIndex-1].style.display="block";
-//  dots[currentIndex-1].className += " active";
-// }
-
-// setInterval(function(){
-//   currentIndex++;
-//   displaySlides(currentIndex);
-// },5000)
-
-// next /previous controls
-// n-number of slide
-// id -container id  index-current slide number in the slider
-
-
-
-displaySlides(indexes.firstSliderIndex,'first','firstSliderIndex');
-// displaySlides(indexes.SecondSliderIndex,'second','SecondSliderIndex');
-
-// prev,next control
-
-function setslides(n,id,index){
-  
-    displaySlides(indexes[index]+=n,id,index);
-
-   
+displaySlides(currentIndex.firstIndex,"first");
+displaySlides(currentIndex.secondIndex,"second");
+function setslides(num,slider){
+   console.log("slider : ",slider)
+if(slider==="first"){
+   displaySlides(currentIndex.firstIndex+=num,slider);
+}
+    else{
+      displaySlides(currentIndex.secondIndex+=num,slider);
+    }
 }
 
-function currentSlide(n,id,index){
-    displaySlides(indexes[index]=n,id,index);
-    setInterval(function(){
-      indexes[index]++;
-     displaySlides(indexes[index], id,index);
-   },5000)
-   
-}
-
-function displaySlides(n, id,index){
-   console.log("n ",n," id ", id, " indexe " ,index);
-   console.log("indexes ", index, " indexes[index] ",indexes[index])
-
- var slides=document.querySelectorAll(`#${id} .slide`);
- var dots=document.getElementsByClassName("dot");
- var speciality=document.getElementsByClassName("r specials");
- if(n<1){
-    indexes[index]=slides.length;
-    speciality[n-1]=speciality.length;
- }
- if(n>slides.length){
-   indexes[index]=1;
-  
- }
- var x;
- for(x=0; x<slides.length; x++){
-    slides[x].style.display="none";
- }
- 
- for(x=0; x<dots.length; x++){
-    dots[x].className=dots[x].className.replace(" active", "");
- }
-
- if(index=="SecondSliderIndex"){
-   for(x=0; x<speciality.length; x++){
-      speciality[x].style.backgroundColor="#fff";
-      speciality[x].style.color="black";
+function currentSlide(n,slider){
+   if(slider==="first"){
+      displaySlides(currentIndex.firstIndex=n,slider);
    }
-   speciality[indexes[index]-1].style.backgroundColor="rgb(224, 190, 127)";
-   speciality[indexes[index]-1].style.color="#fff";
- }
- slides[indexes[index]-1].style.display="flex";
-
- dots[indexes[index]-1].className += " active";
-
-
-
+       else{
+         displaySlides(currentIndex.secondIndex=n,slider);
+       }
+    
 }
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+
+function displaySlides(num,slider){
+
+ var slides1=document.getElementsByClassName("swiper-slide")
+ var cols=document.getElementsByClassName("r specials ")
+ var slide2=document.getElementsByClassName("feature-slide")
+ console.log("slides : ",slides1);
+ console.log("slides : ",slide2);
+ var dot1=document.getElementsByClassName("dot1");
+ var dot2=document.getElementsByClassName("dot2");
+ console.log("slider ",slider)
+ console.log("specials ",cols)
+
+ if(slider==="first"){
+   if(num<1){
+      currentIndex.firstIndex=slides1.length;
+   }
+   if(num>slides1.length){
+      currentIndex.firstIndex=1;
+   }
+   var x;
+   for(x=0; x<slides1.length; x++){
+      slides1[x].style.display="none";
+   }
+   for(x=0; x<dot1.length; x++){
+      dot1[x].className=dot1[x].className.replace(" active", "");
+   }
+   slides1[currentIndex.firstIndex-1].style.display="block";
+   dot1[currentIndex.firstIndex-1].className += " active";
+ }
+ else if(slider==="second"){
+      if(num<1){
+         currentIndex.secondIndex=slide2.length;
+      }
+      if(num>slide2.length){
+         currentIndex.secondIndex=1;
+      }
+      var x;
+      for(x=0; x<slide2.length; x++){
+         slide2[x].style.display="none";
+         cols[x].style.backgroundColor="white";
+         cols[x].style.color="black";
+      }
+      for(x=0; x<dot2.length; x++){
+         dot2[x].className=dot2[x].className.replace(" active", "");
+      }
+      slide2[currentIndex.secondIndex-1].style.display="flex";
+      cols[currentIndex.secondIndex-1].style.backgroundColor="rgb(240, 199, 124)";
+      cols[currentIndex.secondIndex-1].style.color="white";
+      dot2[currentIndex.secondIndex-1].className += " active";
+    }
+ 
+ 
+}
+
+function colorRange(r){
+   let x=0;
+   var HoveredBox=document.getElementsByClassName("r ranges");
+
+   for( x=0; x<HoveredBox.length; x++) {
+     
+      HoveredBox[x].style.color="black";;
+      HoveredBox[x].style.backgroundColor='white';
+   }
+   HoveredBox[r].style.color="white";
+   HoveredBox[r].style.backgroundColor="rgb(240, 199, 124)";
+}
